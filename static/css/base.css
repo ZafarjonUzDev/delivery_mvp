@@ -1,0 +1,48 @@
+:root {
+  color-scheme: light;
+  font-family: system-ui, sans-serif;
+  color: #18241e;
+  background: #f7f8f7;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+main {
+  max-width: 48rem;
+  margin: 3rem auto;
+  padding: 1.5rem;
+  overflow-wrap: anywhere;
+}
+
+h1 {
+  line-height: 1.2;
+}
+
+a {
+  color: #075b3c;
+}
+
+:focus-visible {
+  outline: 3px solid #075b3c;
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  padding: 0.5rem;
+  background: #fff;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}

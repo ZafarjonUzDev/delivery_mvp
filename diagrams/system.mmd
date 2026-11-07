@@ -1,0 +1,21 @@
+flowchart TB
+  B[Browser / Web] --> UI[Shared Responsive Django Templates + JS]
+  T[Telegram bot] --> MA[Telegram Mini App]
+  MA --> UI
+  UI --> DJ[Django Monolith]
+  ADM[Owner / Manager / Staff Admin] --> DJ
+  DJ --> ACC[accounts]
+  DJ --> CAT[catalog & branches]
+  DJ --> ORD[carts & orders]
+  DJ --> REP[reports & audit]
+  DJ --> BRAND[branding]
+  DJ --> NOT[notifications]
+  ACC --> DB[(PostgreSQL)]
+  CAT --> DB
+  ORD --> DB
+  REP --> DB
+  BRAND --> DB
+  NOT --> DB
+  NOT --> API[Telegram Bot API]
+  SCH[Schedule: every 1 minute] --> NOT
+  DJ --> MEDIA[(Persistent Media Storage)]

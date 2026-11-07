@@ -1,0 +1,24 @@
+erDiagram
+  BUSINESS_PROFILE ||--|| BRAND_THEME : has
+  BUSINESS_PROFILE ||--o{ SOCIAL_LINK : publishes
+  BUSINESS_PROFILE ||--o{ BRANCH : operates
+  BRANCH ||--o{ BRANCH_HOURS : schedules
+  BRANCH ||--o{ BRANCH_PRODUCT : offers
+  CATEGORY ||--o{ PRODUCT : classifies
+  PRODUCT ||--o{ BRANCH_PRODUCT : listed_as
+  USER ||--o| TELEGRAM_IDENTITY : optionally_links
+  USER ||--o{ STAFF_MEMBERSHIP : works_as
+  BRANCH ||--o{ STAFF_MEMBERSHIP : authorizes
+  USER ||--o{ CART : owns
+  BRANCH ||--o{ CART : selected_in
+  CART ||--o{ CART_ITEM : includes
+  BRANCH_PRODUCT ||--o{ CART_ITEM : selected
+  BRANCH ||--o{ DISCOUNT : overrides
+  PRODUCT ||--o{ DISCOUNT : may_target
+  USER ||--o{ ORDER : optionally_places
+  BRANCH ||--o{ ORDER : fulfills
+  ORDER ||--|{ ORDER_ITEM : captures
+  ORDER ||--o{ ORDER_STATUS_HISTORY : changes
+  ORDER ||--o{ NOTIFICATION : notifies
+  USER ||--o{ AUDIT_EVENT : acts
+  USER ||--o{ OTP_CHALLENGE : may_request

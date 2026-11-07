@@ -1,0 +1,17 @@
+{% load static i18n %}
+{% get_current_language as current_language %}
+<!doctype html>
+<html lang="{{ current_language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Delivery MVP{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content" lang="uz">Asosiy mazmunga o‘tish / <span lang="ru">К содержимому</span></a>
+    <main id="main-content" tabindex="-1">
+      {% block content %}{% endblock %}
+    </main>
+  </body>
+</html>
